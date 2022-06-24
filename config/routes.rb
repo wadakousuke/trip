@@ -1,7 +1,13 @@
 Rails.application.routes.draw do
 
-  devise_for :user
-  devise_for :admin
+
+  devise_for :user, controllers: {
+  registrations: "public/registrations",
+  sessions: 'public/sessions'
+ }
+  devise_for :admin, controllers: {
+  sessions: "admin/sessions"
+ }
   scope module: :public do
     get 'posts/draft' => "posts#draft", as:"draft"
     resources :posts do
