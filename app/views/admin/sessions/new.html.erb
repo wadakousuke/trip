@@ -11,7 +11,7 @@
   <div class="container">
     <div class="columns is-centered">
       <div class="column is-5">
-      <%= form_with model: @admin, url: admin_session do |f| %>
+      <%= form_with model: @admin, url: admin_session_path do |f| %>
        <%= render "public/shared/error_messages", resource: resource %>
 
         <div class="field">
