@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get "/" => 'home#top'
 
   devise_for :user
   devise_for :admin
