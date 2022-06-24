@@ -1,12 +1,8 @@
 Rails.application.routes.draw do
+  get "/" => 'home#top'
 
-  devise_for :user, controllers: {
-  registrations: "public/registrations",
-  sessions: 'public/sessions'
- }
-  devise_for :admin, controllers: {
-  sessions: "admin/sessions"
- }
+  devise_for :user
+  devise_for :admin
   scope module: :public do
     get 'posts/draft' => "posts#draft", as:"draft"
     resources :posts do
@@ -15,7 +11,6 @@ Rails.application.routes.draw do
     get 'users/confirm' => "users#confirm", as:"confirm"
     patch 'users/withdraw' => "users#withdraw", as:"withdraw"
     resources :users, only:[:update,:edit, :index, :show]
-
     root to:'homes#top'
     post '/guests/guest_sign_in', to: 'guests#new_guest'
   end
