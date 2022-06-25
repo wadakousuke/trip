@@ -1,4 +1,3 @@
-
 <section class="hero is-info">
   <div class="hero-body">
     <div class="container">
@@ -34,14 +33,15 @@
             </p>
           </div>
           <div class="form-group">
-          <label>おすすめ度</label>
+          <label for="book_title">おすすめ度</label>
           <div class="main-rating">
                 <div class="ratings mb-3">
-                  <span class="fas fa-star" id="star"> </span>
-                  <span class="fas fa-star" id="star"> </span>
-                  <span class="fas fa-star" id="star"> </span>
-                  <span class="fas fa-star" id="star"> </span>
-                  <span class="fas fa-star" id="star"> </span>
+                  <%= javascript_pack_tag "reviews" %>
+                  <span class="fa fa-star-o" id="star"></span>
+                  <span class="fa fa-star-o" id="star"></span>
+                  <span class="fa fa-star-o" id="star"></span>
+                  <span class="fa fa-star-o" id="star"></span>
+                  <span class="fa fa-star-o" id="star"></span>
                   <span class="ml-3 rating-value-display"><span id="rating-value-display">0</span>/5</span>
                 </div>
                  <%= f.hidden_field :review, id: "rating-value" %>
@@ -91,5 +91,4 @@
     </div>
   </div>
 </section>
- <%=  javascript_include_tag "reviews.js" %>
 
