@@ -11,7 +11,7 @@ import "popper.js";
 import "../stylesheets/application"
 import '@fortawesome/fontawesome-free/js/all'
 import "channels"
-import "reviews.js"
+import "scripts/reviews.js"
 
 Rails.start()
 Turbolinks.start()
