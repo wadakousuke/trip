@@ -33,18 +33,11 @@
             </p>
           </div>
           <div class="form-group">
-          <label for="book_title">おすすめ度</label>
-          <div class="main-rating">
-                <div class="ratings mb-3">
-                  <%= javascript_pack_tag "reviews" %>
-                  <span class="fa fa-star-o" id="star"></span>
-                  <span class="fa fa-star-o" id="star"></span>
-                  <span class="fa fa-star-o" id="star"></span>
-                  <span class="fa fa-star-o" id="star"></span>
-                  <span class="fa fa-star-o" id="star"></span>
-                  <span class="ml-3 rating-value-display"><span id="rating-value-display">0</span>/5</span>
-                </div>
-                 <%= f.hidden_field :review, id: "rating-value" %>
+          <label for="title">おすすめ度</label>
+            <p class="control has-icons-left">
+             <%=f.text_field :review, autofocus: true, class: "input", placeholder: "1~5で評価してください" %>
+              <span class="icon is-small is-left">
+             <%=f.text_field :review, autofocus: true, class: "input"%>
               </div>
           </div>
           <div class="form-group">
