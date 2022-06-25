@@ -1,6 +1,5 @@
-// class = "ratings"の子要素を取得
-const stars = document.querySelector(".ratings").children;
-// const stars = document.getElementsByClassName("ratings").children;
+// class = "ratings"の子要素を取
+const stars = document.getElementsByClassName("ratings").children;
 // id = "rating-value"の要素を取得
 const ratingValue = document.getElementById("rating-value");
 // id = "rating-value-display"の要素を取得
